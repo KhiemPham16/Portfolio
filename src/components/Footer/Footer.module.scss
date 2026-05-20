@@ -70,3 +70,17 @@
         }
     }
 }
+
+@media (max-width: 860px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .content p {
+        max-width: 100%;
+    }
+    .social-icons {
+        margin-top: 12px;
+    }
+}
