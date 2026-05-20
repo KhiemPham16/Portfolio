@@ -1,0 +1,48 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+:root {
+    --color-warning: #ff9900;
+    --color-danger: #ef4444;
+    --color-success: #10b981;
+    --color-info: #06b6d4;
+    --color-black: #000000;
+    --font-family-serif: 'Playfair', serif;
+    --font-family: 'Roboto', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    // font-size: 62.5%; // 1rem = 10px
+    /* Chrome */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Firefox */
+    scrollbar-width: none;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #f9fafb;
+    color: var(--color-black);
+    line-height: 1.5;
+    text-rendering: optimizespeed;
+    overflow-y: overlay;
+}
+
+// Định dạng cho các thẻ li và a
+li,
+a {
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--color-black);
+}
