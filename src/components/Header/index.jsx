@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
+import { RxHamburgerMenu } from 'react-icons/rx';
 
 import styles from './Header.module.scss';
 
@@ -37,9 +38,7 @@ export default function Header() {
                                 aria-expanded={open}
                                 onClick={toggle}
                             >
-                                <span className={cx('bar')} />
-                                <span className={cx('bar')} />
-                                <span className={cx('bar')} />
+                                <RxHamburgerMenu className={cx('hamburgerIcon')} />
                             </button>
                         </nav>
                         {/* btn Hire */}

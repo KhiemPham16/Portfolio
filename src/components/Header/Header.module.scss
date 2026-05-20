@@ -30,13 +30,6 @@
     }
 }
 
-// .header-center {
-//     display: flex;
-//     align-items: center;
-//     gap: 32px;
-
-// }
-
 .hire-btn {
     display: inline-flex;
     align-items: center;
@@ -73,13 +66,11 @@
     padding: 8px;
     cursor: pointer;
 }
-.mobile-toggle .bar {
-    display: block;
-    width: 20px;
-    height: 2px;
-    margin: 3px 0;
-    background: #111827;
-    border-radius: 2px;
+.hamburgerIcon {
+    width: 22px;
+    height: 22px;
+    color: #111827;
+    display: inline-block;
 }
 
 @media (max-width: 860px) {
