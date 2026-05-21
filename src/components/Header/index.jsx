@@ -1,55 +1,60 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import classNames from 'classnames/bind';
 import { RxHamburgerMenu } from 'react-icons/rx';
 
 import styles from './Header.module.scss';
+const fileUrl = '/pdfs/resume.pdf';
 
 const cx = classNames.bind(styles);
+
+const navLinks = [
+    { label: 'Home', href: '#home' },
+    { label: 'About', href: '#about' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Contact', href: '#contact' }
+];
 
 export default function Header() {
     const [open, setOpen] = useState(false);
 
-    const toggle = () => setOpen((v) => !v);
+    const closeMenu = () => setOpen(false);
+
     return (
-        <>
-            <div className={cx('header')}>
-                <div className={cx('container')}>
-                    <div className={cx('header-content')}>
-                        {/* Name */}
-                        <Link className={cx('name')} to="/">
-                            <h3>KhiemPham16</h3>
-                        </Link>
-                        <nav className={cx('nav')}>
-                            <div className={cx('nav-links', open ? 'open' : '')}>
-                                <Link className={cx('link')} to="/">
-                                    About
-                                </Link>
-                                <Link className={cx('link')} to="/projects">
-                                    Projects
-                                </Link>
-                                <Link className={cx('link')} to="/contact">
-                                    Contact
-                                </Link>
-                            </div>
-                            <button
-                                className={cx('mobile-toggle')}
-                                aria-label="Toggle menu"
-                                aria-expanded={open}
-                                onClick={toggle}
-                            >
-                                <RxHamburgerMenu className={cx('hamburgerIcon')} />
-                            </button>
-                        </nav>
-                        {/* btn Hire */}
-                        <div className={cx('header-right')}>
-                            <Link className={cx('hire-btn')} to="/cv">
-                                Hire me
-                            </Link>
+        <header className={cx('header')}>
+            <div className={cx('container')}>
+                <div className={cx('header-content')}>
+                    <a className={cx('name')} href="#home" onClick={closeMenu}>
+                        <h3>KhiemPham16</h3>
+                    </a>
+
+                    <nav className={cx('nav')}>
+                        <div className={cx('nav-links', { open })}>
+                            {navLinks.map((item) => (
+                                <a key={item.href} className={cx('link')} href={item.href} onClick={closeMenu}>
+                                    {item.label}
+                                </a>
+                            ))}
                         </div>
+
+                        <button
+                            type="button"
+                            className={cx('mobile-toggle')}
+                            aria-label="Toggle menu"
+                            aria-expanded={open}
+                            onClick={() => setOpen((prev) => !prev)}
+                        >
+                            <RxHamburgerMenu className={cx('hamburgerIcon')} />
+                        </button>
+                    </nav>
+
+                    <div className={cx('header-right')}>
+                        <a href={fileUrl} download="resume.pdf" className={cx('hire-btn')}>
+                            Hire me
+                        </a>
                     </div>
                 </div>
             </div>
-        </>
+        </header>
     );
 }

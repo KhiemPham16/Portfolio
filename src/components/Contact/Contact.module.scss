@@ -1,0 +1,171 @@
+.contactSection {
+    padding: 100px 0;
+}
+
+.contactContainer {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.contactContent {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 64px;
+
+    padding: 48px;
+
+    border-radius: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(0, 229, 255, 0.14);
+
+    box-shadow:
+        0 20px 40px rgba(15, 23, 42, 0.04),
+        0 0 30px rgba(0, 229, 255, 0.04);
+}
+
+.contactLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contactTitle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 40px;
+    font-weight: 800;
+
+    color: #0f172a;
+}
+
+.contactDescription {
+    margin-top: 24px;
+
+    max-width: 620px;
+
+    color: #64748b;
+
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.contactRight {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contactCard {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 22px;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(0, 229, 255, 0.14);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+
+        border-color: rgba(0, 229, 255, 0.4);
+
+        box-shadow:
+            0 14px 30px rgba(15, 23, 42, 0.06),
+            0 0 24px rgba(0, 229, 255, 0.06);
+    }
+}
+
+.contactIcon {
+    width: 56px;
+    height: 56px;
+
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 229, 255, 0.08);
+
+    color: #00bcd4;
+
+    font-size: 28px;
+
+    flex-shrink: 0;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contactLabel {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #64748b;
+}
+
+.contactValue {
+    color: #0f172a;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    word-break: break-word;
+}
+
+@media (max-width: 900px) {
+    .contactContent {
+        grid-template-columns: 1fr;
+        gap: 40px;
+
+        padding: 32px;
+    }
+}
+
+@media (max-width: 640px) {
+    .contactSection {
+        padding: 72px 0;
+    }
+
+    .contactTitle {
+        font-size: 32px;
+    }
+
+    .contactDescription {
+        font-size: 16px;
+    }
+
+    .contactCard {
+        padding: 18px;
+    }
+
+    .contactIcon {
+        width: 48px;
+        height: 48px;
+
+        font-size: 24px;
+    }
+
+    .contactValue {
+        font-size: 15px;
+    }
+}
