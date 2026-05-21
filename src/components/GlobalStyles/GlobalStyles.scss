@@ -29,6 +29,7 @@ html {
 
     /* Firefox */
     scrollbar-width: none;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -46,4 +47,9 @@ a {
     text-decoration: none;
     list-style-type: none;
     color: var(--color-black);
+}
+.container {
+    padding: 56px 16px;
+    max-width: 1280px;
+    margin: 0 auto;
 }
