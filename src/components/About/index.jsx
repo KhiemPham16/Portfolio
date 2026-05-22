@@ -28,10 +28,11 @@ export default function About() {
                             <br />
 
                             <p>
-                                Hiện tại, tôi đang học tại <span className={cx('accent')}>Cao Đẳng Việt Mỹ (APC)</span>{' '}
-                                từ năm 2022. Trong quá trình học, tôi đã làm việc với React, JavaScript, HTML, CSS, C#,
-                                ASP.NET Core, MongoDB và MySQL. Backend với tôi là nền tảng bổ trợ để hiểu luồng dữ liệu
-                                và làm việc tốt hơn với API.
+                                Tôi đang theo học tại <span className={cx('accent')}>Cao Đẳng Việt Mỹ (APC)</span> từ
+                                năm 2022 đến nay. Trong quá trình học, tôi đã có kinh nghiệm làm việc với React,
+                                JavaScript, HTML, CSS, C#, ASP.NET Core, MongoDB và MySQL. Đối với tôi, kiến thức
+                                Backend đóng vai trò là nền tảng bổ trợ quan trọng, giúp tôi hiểu rõ luồng dữ liệu và
+                                làm việc hiệu quả hơn với các API.
                             </p>
 
                             <div className={cx('statsGrid')}>
